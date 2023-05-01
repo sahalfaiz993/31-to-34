@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>31n to 34 chapters</title>
+</head>
+<body>
+    <script>
+        // question no 1
+
+var d = new Date();
+document.write(d)
+
+// end
+
+// question no 2
+var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+var currentDate = new Date();
+var currentMonth = months[currentDate.getMonth()];
+
+alert("The current month " +currentMonth);
+
+// end
+
+// question no 3
+var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+var currentDate = new Date();
+var currentDay = days[currentDate.getDay()];
+
+alert("Today is " +currentDay);
+
+// end
+
+
+// question no 4
+var currentDate = new Date();
+var currentDay = currentDate.getDay();
+
+if (currentDay === 0 || currentDay === 6) {
+  alert("It's Fun day");
+} else {
+  alert("It's not Fun day");
+}
+
+// end
+
+
+// questionno 5
+const currentDate = new Date();
+const currentDay = currentDate.getDate();
+
+if (currentDay < 16) {
+  alert("First fifteen days of the month");
+} else {
+  alert("Last days of the month");
+ }
+
+// end
+
+
+// question no 6
+var currentDate = new Date();
+document.write(currentDate)
+document.write("<br>")
+
+var minutes = Math.floor(currentDate.getTime() / (1000 * 60));
+document.write("Minutes since midnight, Jan. 1, 1970:" + minutes);
+document.write("<br>")
+var milliseconds = Math.ceil(currentDate.getMilliseconds() / (1000 * 60));
+document.write("Milliseconds since midnight, Jan. 1, 1970:" + milliseconds);
+
+
+// question no 7
+
+
+var inputHour = parseInt(prompt("Enter the hour"));
+  if (inputHour < 12) {
+    alert("It's AM");
+  } else if (inputHour >= 12 && inputHour <= 23) {
+    
+    alert("It's PM");
+  } else {
+    alert("Invalid input. Please enter a valid hour (0-23).");
+  }
+// end
+
+// qno 8
+
+var lastdate = new Date();
+var set = lastdate.setDate(2020,1,31)
+document.write(set);
+
+// Create a new Date object for June 18, 2015
+
+// question no 9
+var ramadanStartDate = new Date(2023, 4, 23); 
+var currentDate = new Date();
+var timeDifferenceMs = currentDate - ramadanStartDate;
+var daysPassed = Math.floor(timeDifferenceMs / (1000 * 60 * 60 * 24));
+alert("Number of days past since 1st Ramadan: " + daysPassed + " days.");
+
+// end
+
+// question no 10
+var click= new Date();
+var nowclick= new Date(April,17,2015);
+var sub = click-nowclick;
+
+var time = Math.floor(sub/1000);
+document.write("this time of seconds"+time)
+// end
+
+// Question no 11
+
+var now = new Date();
+document.write(now);
+var reset = now.getHours();
+now.setHours(reset+1);
+
+document.write("<br>")
+document.write("one our ago"+ now);
+
+// end
+
+
+// qusetion no 12
+
+
+
+var currentDate = new Date();
+var   pastDate = new Date(currentDate);
+pastDate.setFullYear(currentDate.getFullYear() - 100);
+var   formattedPastDate = (pastDate.getMonth() + 1) + '/' + pastDate.getDate() + '/' + pastDate.getFullYear();
+alert('100 years ago, the date was: ' + formattedPastDate);
+
+
+// end
+
+// question no 13
+
+
+
+var age = prompt("Please enter your age:");
+var  currentYear = new Date().getFullYear();
+var  birthYear = currentYear - age;
+document.write("Your birth year is: " + birthYear);
+
+// // end
+
+
+//  qusetion no 14
+
+
+var  customerName = prompt("Enter customer name:");
+var  currentMonth = prompt("Enter current month:");
+var  numberOfUnits = parseFloat(prompt("Enter number of units:"))
+
+var  chargesPerUnit = 15.50;
+var  latePaymentSurcharge = 200;
+var  dueDate = 10;
+
+// Calculate net amount payable within due date
+var  netAmountPayable = numberOfUnits * chargesPerUnit;
+
+// Calculate gross amount payable after due date
+var  currentDate = new Date();
+var  currentDay = currentDate.getDate();
+var  daysLate = Math.max(0, currentDay - dueDate);
+var  grossAmountPayable = netAmountPayable + latePaymentSurcharge;
+
+// Display the K-Electric bill details in the browser
+document.write("<h1>K-Electric Bill</h1>");
+document.write("<p><strong>Customer Name:</strong> " + customerName + "</p>");
+document.write("<p><strong>Current Month:</strong> " + currentMonth + "</p>");
+document.write("<p><strong>Number of Units:</strong> " + numberOfUnits.toFixed(2) + "</p>");
+document.write("<p><strong>Charges per Unit:</strong> $" + chargesPerUnit.toFixed(2) + "</p>");
+document.write("<p><strong>Net Amount Payable (within Due Date):</strong> $" + netAmountPayable.toFixed(2) + "</p>");
+document.write("<p><strong>Late Payment Surcharge:</strong> $" + latePaymentSurcharge.toFixed(2) + "</p>");
+document.write("<p><strong>Gross Amount Payable (after Due Date):</strong> $" + grossAmountPayable.toFixed(2) + "</p>");
+
+    </script>
+</body>
+</html>
